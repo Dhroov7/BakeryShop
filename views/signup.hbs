@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Choco Factory|Sign Up</title>
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/jquery-3.2.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="/signupFront.js"></script>
 </head>
 <body>
+<div class="container">
+    <h1 style="font-family: Arial;padding-top: 100px;padding-left: 450px">Sign Up</h1>
+    <form action="/user/signup" method="post">
+        <div class="form-row mt-4" style="padding-left: 350px">
+            <input class="form-control" type="text" name="username" placeholder="Username" style="width: 400px">
+        </div>
+        <div class="form-row mt-4" style="padding-left: 350px">
+            <input class="form-control" type="password" name="password" placeholder="Enter password"
+                   style="width: 400px">
+        </div>
+        <div class="form-row mt-4" style="padding-left: 350px">
+            <input class="form-control" type="text" name="address" placeholder="Address" style="width: 400px;height: 100px">
+        </div>
+        <div class="form-row mt-4" style="padding-left: 350px">
+            <input class="form-control" type="text" name="city" placeholder="City" style="width: 400px">
+        </div>
+        <div class="form-row mt-4" style="padding-left: 350px">
+            <input class="form-control" type="number" name="zipCode" placeholder="Zip Code" style="width: 400px">
+        </div>
+        <div class="row mt-4" style="padding-left: 500px">
+            <input type="submit" class="btn btn-success" value="Sign Up" id="signup">
+        </div>
+    </form>
+</div>
 
+<div class="row" style="padding-left: 520px;padding-top: 20px">
+    <div class="col-6">
+        <a href="/user/login">Already have an account?</a>
+    </div>
+</div>
 </body>
 </html>

@@ -8,4 +8,8 @@ route.get('/catalog',(req,res) => {
     res.render('catalog')
 })
 
+route.get('/admin',(req,res) => {
+    res.render('admin')
+})
+
 exports = module.exports = route

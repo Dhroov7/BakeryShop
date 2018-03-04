@@ -2,8 +2,8 @@ const route = require('express').Router()
 const passport = require('../passport')
 const user = require('../db/models').user
 
-route.get('/signin',(req,res) => {
-    res.render('signin')
+route.get('/login',(req,res) => {
+    res.render('login')
 })
 
 route.get('/signup',(req,res) => {
@@ -13,7 +13,10 @@ route.get('/signup',(req,res) => {
 route.post('/signup',(req,res) => {
     user.create({
         username:req.body.username,
-        password:req.body.password
+        password:req.body.password,
+        address:req.body.address,
+        city:req.body.city,
+        zipCode:req.body.zipCode
     }).then(() => {
         res.redirect('/user/signin')
     })

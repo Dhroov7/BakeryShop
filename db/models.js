@@ -1,7 +1,7 @@
 const sequelize = require('sequelize')
 const datatypes = sequelize.DataTypes
 
-const db = new sequelize('bakerydb','bakeryuser','akerypass',{
+const db = new sequelize('bakerydb','bakeryuser','bakerypass',{
     dialect:'mysql'
 })
 
@@ -13,6 +13,18 @@ const user = db.define('users',{
     },
     password:{
         type:datatypes.STRING,
+        allowNull:false
+    },
+    address:{
+        type:datatypes.STRING,
+        allowNull:false
+    },
+    city:{
+        type:datatypes.STRING,
+        allowNull:false
+    },
+    zipCode:{
+        type:datatypes.INTEGER,
         allowNull:false
     }
 })

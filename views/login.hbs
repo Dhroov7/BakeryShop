@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Choco Factory|Login</title>
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/jquery-3.2.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-
+<div class="container">
+    <h1 style="font-family: Arial;padding-top: 200px;padding-left: 475px">Sign In</h1>
+    <form action="/user/signin" method="post">
+        <div class="form-row mt-4" style="padding-left: 350px">
+            <input class="form-control" type="text" name="username" placeholder="Enter username" style="width: 400px">
+        </div>
+        <div class="form-row mt-4" style="padding-left: 350px">
+            <input class="form-control" type="password" name="password" placeholder="Enter password" style="width: 400px">
+        </div>
+        <div class="row mt-4" style="padding-left: 500px">
+            <input type="submit" class="btn btn-success" value="Sign In" id="signin">
+        </div>
+    </form>
+</div>
 </body>
 </html>
