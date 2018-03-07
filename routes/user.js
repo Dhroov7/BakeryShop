@@ -18,13 +18,13 @@ route.post('/signup',(req,res) => {
         city:req.body.city,
         zipCode:req.body.zipCode
     }).then(() => {
-        res.redirect('/user/signin')
+        res.redirect('/user/login')
     })
 })
 
-route.post('/signin',passport.authenticate('local',{
+route.post('/login',passport.authenticate('local',{
     successRedirect : '/pages/catalog',
-    failureRedirect : '/user/signin'
+    failureRedirect : '/user/login'
 }))
 
 exports = module.exports = route

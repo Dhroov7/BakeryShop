@@ -1,5 +1,5 @@
 $(function () {
     $('#signup').click(function () {
-        $.post('/user/login')
+        $.post('/user/signup')
     })
 })
