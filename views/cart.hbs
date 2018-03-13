@@ -12,19 +12,34 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<nav>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/pages/catalog">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/pages/admin">Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/pages/cart">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    Your Cart
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>
 <div class="row">
     <h1 class="col-6" style="text-align: center">Your Cart</h1>
 </div>
 
 
-<ul class="list-group mt-5" id="cartList"  style="padding-left: 300px;padding-right: 300px">
+<ul class="list-group mt-5" id="cartList" style="padding-left: 300px;padding-right: 300px">
 
 </ul>
 
-<ul class="list-group mt-5" id="cartTotal"  style="padding-left: 300px;padding-right: 300px">
+<ul class="list-group mt-5" id="cartTotal" style="padding-left: 300px;padding-right: 300px">
 
 </ul>
 </body>
