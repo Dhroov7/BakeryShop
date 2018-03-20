@@ -11,26 +11,89 @@
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
     <script src="/catalogFront.js"></script>
+    <script src="/carousel.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<nav class="navbar navbar-light navbar-expand-lg">
+    <div class="navbar-collapse collapse">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+            <li class="nav-item" style="margin-left: 90px;margin-right: 30px">
+                <a class="nav-link" href="/pages/catalog" style="color: black">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+
+            <li class="nav-item" style="margin-right: 30px">
+                <a class="nav-link" href="/pages/catalog"  style="color: black">Shop</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+
+            <li class="nav-item" style="margin-right: 30px">
+                <a class="nav-link" href="/pages/catalog"  style="color: black">Contact Us</a>
+            </li>
+
+            <li class="nav-item" style="margin-right: 30px;margin-left: 600px">
+                <a class="nav-link" href="/pages/catalog"  style="color: black">Your Cart</a>
+            </li>
+
+            <li class="nav-item" style="float:right">
+                <a class="nav-link" href="/pages/catalog"  style="color: black">Sign Out</a>
             </li>
         </ul>
     </div>
 </nav>
-<h1>Catalog</h1>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img style="height: 500px;filter: blur(2px)" class="d-block w-100" src="/images/cake.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: black">Cakes</h1>
+                <p style="font-size: 30px;color: black">25% off on your first order</p>
+                <a class="btn btn-dark" href="">Buy Now</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img style="height: 500px;filter: blur(2px)" class="d-block w-100" src="/images/pastry-1.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: black">Pastry</h1>
+                <p style="font-size: 30px;color: black">Buy one and get another free on your first order</p>
+                <a class="btn btn-dark">Buy Now</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img style="height: 500px;filter: blur(2px)" class="d-block w-100" src="/images/bread.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: black">Breads</h1>
+                <p style="font-size: 30px;color: black">Freshly baked breads</p>
+                <a class="btn btn-dark">Buy Now</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img style="height: 500px;filter: blur(2px)" class="d-block w-100" src="/images/sandwich.jpg" alt="Fourth slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: black">Snacks</h1>
+                <p style="font-size: 30px;color: black">10% off on your first order</p>
+                <a class="btn btn-dark">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
 <div class="row mt-5 ml-3" id="catalog">
 
 </div>
+
 </body>
 </html>

@@ -1,7 +1,8 @@
-$.get('/pages/getProducts',function (data) {
-    $('#catalog').empty()
-    for(let i=0;i<data;i++){
-        $('#catalog').append(`<div class="col-3">
+$(function () {
+    $.get('/pages/getProducts', function (data) {
+        $('#catalog').empty()
+        for (let i = 0; i < data; i++) {
+            $('#catalog').append(`<div class="col-3">
         <div class="card" style="width: 18rem;height: 200px">
             <div class="card-body">
                 <h4 class="card-title">${data[i].name}</h4>
@@ -13,5 +14,6 @@ $.get('/pages/getProducts',function (data) {
         </div>
     </div>
     `)
-    }
+        }
+    })
 })
