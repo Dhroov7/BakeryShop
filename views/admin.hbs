@@ -32,6 +32,15 @@
 <form action="/pages/addProduct" method="post">
     Product Name:<input type="text" name="name" id="ProductName"><br>
     Product Price:<input type="text" name="price" id="ProductPrice"><br>
+    <div class="form-group">
+        <!--<label for="sel1">Category</label>-->
+        <select class="form-control" name="categoryPro">
+            <option>Cake</option>
+            <option>Pastry</option>
+            <option>Breads</option>
+            <option>Snacks</option>
+        </select>
+    </div>
     <input type="submit" value="Add Product" id="addBtn">
 </form>
 

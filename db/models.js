@@ -38,6 +38,10 @@ const products = db.define('products',{
     price:{
         type: datatypes.INTEGER,
         allowNull:false
+    },
+    category:{
+        type:datatypes.STRING,
+        allowNull:false
     }
 })
 
