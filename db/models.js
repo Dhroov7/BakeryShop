@@ -42,6 +42,10 @@ const products = db.define('products',{
     category:{
         type:datatypes.STRING,
         allowNull:false
+    },
+    photo:{
+        type:datatypes.STRING,
+        allowNull:false
     }
 })
 
