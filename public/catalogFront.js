@@ -1,7 +1,9 @@
 $(function () {
     $.get('/pages/getProducts', function (data) {
         $('#catalog').empty()
-        for (let i = 0; i < data; i++) {
+        // console.log(typeof data)
+        for (let i = 0; i < data.length; i++) {
+            console.log(data[i].name + " " + data[i].price)
             $('#catalog').append(`<div class="col-3">
         <div class="card" style="width: 18rem;height: 200px">
             <div class="card-body">

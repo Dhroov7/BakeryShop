@@ -40,8 +40,10 @@ route.post('/addProduct', (req, res) => {
 })
 
 route.get('/getProducts', (req, res) => {
-    console.log(typeof products)
-    res.send(products)
+    products.findAll({}).then(function (data) {
+        // console.log(data)
+        res.send(data)
+    })
 })
 
 exports = module.exports = route
