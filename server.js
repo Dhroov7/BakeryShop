@@ -4,7 +4,8 @@ const session = require('express-session')
 const passport = require('passport')
 const multer = require('multer')
 const upload = multer({dest:'uploads/'})
-const fs = require('file-system')
+const fs = require('fs')
+const products = require('./db/models').products
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -23,14 +24,20 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 //file upload using multer
-app.post('/photoup',upload.single('photo'),(req,res) => {
+app.post('/addProduct',upload.single('photo'),(req,res) => {
     fs.readFile(req.file.path,(err,data) => {
         fs.writeFile('public/images/'+req.file.originalname,data,(err) => {
             fs.unlink(req.file.path,() => {})
         })
     })
 
-    res.send('File Uploaded')
+    products.create({
+        name: req.body.name,
+        price: parseInt(req.body.price),
+        category:req.body.categoryPro,
+    })
+
+    res.redirect('/pages/admin')
 })
 
 app.use('/pages',require('./routes/pages'))

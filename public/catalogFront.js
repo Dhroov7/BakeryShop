@@ -4,17 +4,16 @@ $(function () {
         // console.log(typeof data)
         for (let i = 0; i < data.length; i++) {
             console.log(data[i].name + " " + data[i].price)
-            $('#catalog').append(`<div class="col-3">
-        <div class="card" style="width: 18rem;height: 200px">
-            <div class="card-body">
-                <h4 class="card-title">${data[i].name}</h4>
-                <p class="card-text"> &#8377;${data[i].price}</p>
-                <button type="button" class="btn add" href="#" data-id = "0">
-                    <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
+            $('#catalog').append(`<div class="card" style="width: 18rem;margin-right: 10px;margin-bottom: 20px">
+    <img class="card-img-top" src="/images/sandwich.jpg">
+    <div class="card-body">
+        <h5 class="card-title">Product Name</h5>
+        <p class="card-text">Product Price</p>
+        <a href="#" class="btn">
+            <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
+        </a>
     </div>
+</div>
     `)
         }
     })

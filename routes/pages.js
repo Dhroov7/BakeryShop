@@ -29,16 +29,6 @@ route.get('/bread', (req, res) => {
     res.render('bread')
 })
 
-route.post('/addProduct', (req, res) => {
-    products.create({
-        name: req.body.name,
-        price: parseInt(req.body.price),
-        category:req.body.categoryPro
-    })
-
-    res.redirect('/pages/admin')
-})
-
 route.get('/getProducts', (req, res) => {
     products.findAll({}).then(function (data) {
         // console.log(data)

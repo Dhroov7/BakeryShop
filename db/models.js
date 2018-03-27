@@ -39,14 +39,15 @@ const products = db.define('products',{
         type: datatypes.INTEGER,
         allowNull:false
     },
-    category:{
-        type:datatypes.STRING,
-        allowNull:false
-    },
-    photo:{
-        type:datatypes.STRING,
-        allowNull:false
+    category: {
+        type: datatypes.STRING,
+        allowNull: false
     }
+    // },
+    // photo:{
+    //     type:datatypes.STRING,
+    //     allowNull:false
+    // }
 })
 
 db.sync().then(() => "Database Created")
