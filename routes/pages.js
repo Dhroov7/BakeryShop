@@ -36,4 +36,44 @@ route.get('/getProducts', (req, res) => {
     })
 })
 
+route.get('/getbread',(req,res) => {
+    products.findAll({
+        where:{
+            category:'bread'
+        }
+    }).then(function (data) {
+        res.send(data)
+    })
+})
+
+route.get('/getsnack',(req,res) => {
+    products.findAll({
+        where:{
+            category:'snack'
+        }
+    }).then(function (data) {
+        res.send(data)
+    })
+})
+
+route.get('/getcake',(req,res) => {
+    products.findAll({
+        where:{
+            category:'cake'
+        }
+    }).then(function (data) {
+        res.send(data)
+    })
+})
+
+route.get('/getpastry',(req,res) => {
+    products.findAll({
+        where:{
+            category:'pastry'
+        }
+    }).then(function (data) {
+        res.send(data)
+    })
+})
+
 exports = module.exports = route

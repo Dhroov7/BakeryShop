@@ -1,5 +1,5 @@
 $(function () {
-    $.get('/pages/getProducts', function (data) {
+    $.get('/pages/getpastry', function (data) {
         $('#catalog').empty()
         for (let i = 0; i < data.length; i++) {
             console.log(data[i].name + " " + data[i].price)
