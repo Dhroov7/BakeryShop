@@ -1,6 +1,7 @@
 const route = require('express').Router()
 const products = require('../db/models').products
 
+let cart = [];
 route.get('/cart', (req, res) => {
     res.render('cart')
 })
@@ -36,44 +37,72 @@ route.get('/getProducts', (req, res) => {
     })
 })
 
-route.get('/getbread',(req,res) => {
+route.get('/getbread', (req, res) => {
     products.findAll({
-        where:{
-            category:'bread'
+        where: {
+            category: 'bread'
         }
     }).then(function (data) {
         res.send(data)
     })
 })
 
-route.get('/getsnack',(req,res) => {
+route.get('/getsnack', (req, res) => {
     products.findAll({
-        where:{
-            category:'snack'
+        where: {
+            category: 'snack'
         }
     }).then(function (data) {
         res.send(data)
     })
 })
 
-route.get('/getcake',(req,res) => {
+route.get('/getcake', (req, res) => {
     products.findAll({
-        where:{
-            category:'cake'
+        where: {
+            category: 'cake'
         }
     }).then(function (data) {
         res.send(data)
     })
 })
 
-route.get('/getpastry',(req,res) => {
+route.get('/getpastry', (req, res) => {
     products.findAll({
-        where:{
-            category:'pastry'
+        where: {
+            category: 'pastry'
         }
     }).then(function (data) {
         res.send(data)
     })
+})
+
+route.post('/cart', (req, res) => {
+    products.find({
+        where:{
+            id:req.body.id
+        }
+    }).then(function (data) {
+        if (cart.findIndex(function () {
+                pro.name == data.name
+            })) {
+            let id = cart.findIndex(function () {
+                pro.name == data.name
+            })
+            cart[id].quantity += 1
+        } else {
+            cart.push({
+                name: req.body.name,
+                price: req.body.price,
+                quantity: 1
+            })
+        }
+    })
+    res.status(200)
+})
+
+route.get('/getcart',(req,res) => {
+    res.send(cart)
 })
 
 exports = module.exports = route
