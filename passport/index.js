@@ -1,6 +1,6 @@
 const passport = require('passport')
 const strategies = require('./strategies')
-const user = require('../db/models').user
+const users = require('../db/models').users
 
 passport.use(strategies.localStrategy)
 
@@ -9,7 +9,7 @@ passport.serializeUser(function (user,done) {
 })
 
 passport.deserializeUser(function (userid,done) {
-    user.findOne({
+    users.findOne({
         where:{
             id:userid
         }

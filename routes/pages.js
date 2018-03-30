@@ -83,20 +83,12 @@ route.post('/cart', (req, res) => {
             id:req.body.id
         }
     }).then(function (data) {
-        if (cart.findIndex(function () {
-                pro.name == data.name
-            })) {
-            let id = cart.findIndex(function () {
-                pro.name == data.name
-            })
-            cart[id].quantity += 1
-        } else {
-            cart.push({
-                name: req.body.name,
-                price: req.body.price,
-                quantity: 1
-            })
-        }
+        console.log(typeof data)
+        cart.push({
+            name: data.name,
+            price: data.price,
+            quantity: 1
+        })
     })
     res.status(200)
 })

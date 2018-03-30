@@ -8,7 +8,7 @@ $(function () {
     <div class="card-body">
         <h5 class="card-title">${data[i].name}</h5>
         <p class="card-text">&#8377;${data[i].price}</p>
-        <button type="button" href="#" class="btn add" data-id = "${data[i].id}">
+        <button class="btn add" data-id = "${data[i].id}">
             <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
         </button>
     </div>
@@ -17,8 +17,9 @@ $(function () {
         }
     })
 
-    $('.add').click(function (ele) {
+    $(".add").click(function (ele) {
         let btnId = +(ele.target.getAttribute("data-id"));
+        console.log('button')
         $.post('/pages/cart',{id:btnId})
     })
 })

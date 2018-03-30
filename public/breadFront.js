@@ -16,9 +16,10 @@ $(function () {
     `)
         }
     })
-    
-    $('.add').click(function (ele) {
+
+    $(".add").click(function (ele) {
         let btnId = +(ele.target.getAttribute("data-id"));
+        console.log('button')
         $.post('/pages/cart',{id:btnId})
     })
 

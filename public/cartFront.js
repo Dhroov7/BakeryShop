@@ -9,11 +9,11 @@ $(function () {
             $("#cartList").append(`
             <li class="list-group-item">
         <div class="row">
-            <div class="col-3">
+            <div class="col-9">
                 ${data[i].name}
             </div>
             <div class="col-3">
-             ${data[i].price}
+             &#8377;${data[i].price}
             </div>
         </div>
     </li>`)

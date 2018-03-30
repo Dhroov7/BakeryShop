@@ -5,7 +5,7 @@ const db = new sequelize('bakerydb','bakeryuser','bakerypass',{
     dialect:'mysql'
 })
 
-const user = db.define('users',{
+const users = db.define('users',{
     username:{
         type:datatypes.STRING,
         allowNull:false,
@@ -54,6 +54,6 @@ db.sync().then(() => "Database Created")
 
 exports = module.exports = {
     db,
-    user,
+    users,
     products
 }

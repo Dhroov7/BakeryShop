@@ -1,16 +1,16 @@
 const LocalStrategy = require('passport-local').Strategy
-const user = require('../db/models').user
+const users = require('../db/models').users
 
 const localStrategy = new LocalStrategy(
     (username,password,done) => {
-        user.findOne({
+        users.findOne({
             where:{
                 username:username
             }
         }).then((user) => {
             if(!user){
                 return done(null,false,{message:"Wrong username"})
-            }else if(password===password){
+            }else if(user.password===password){
                 return done(null,user)
             }else{
                 return done(null,false,{message:"Wrong password"})
